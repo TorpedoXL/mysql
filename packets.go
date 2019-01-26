@@ -33,7 +33,7 @@ func (mc *mysqlConn) readPacket() ([]byte, error) {
 			if cerr := mc.canceled.Value(); cerr != nil {
 				return nil, cerr
 			}
-			errLog.Print(err)
+//			errLog.Print(err)
 			mc.Close()
 			return nil, ErrInvalidConn
 		}
